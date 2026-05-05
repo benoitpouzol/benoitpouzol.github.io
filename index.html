@@ -132,7 +132,26 @@
   <p>
     Enregistrement, production et mixage musical, avec une forte expérience rock, metal et musiques amplifiées.
   </p>
+.albums{
+  margin-top:15px;
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(60px, 1fr));
+  gap:6px;
+}
 
+.albums img{
+  width:100%;
+  aspect-ratio:1;
+  object-fit:cover;
+  filter:grayscale(100%);
+  transition:all .2s ease;
+  border:1px solid #111;
+}
+
+.albums img:hover{
+  filter:none;
+  transform:scale(1.05);
+}
   <div class="albums">
     <img src="acidmist.jpg">
     <img src="dust.jpg">
