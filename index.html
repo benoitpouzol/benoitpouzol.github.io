@@ -4,36 +4,29 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <title>Benoît Pouzol — Ingénieur du son / Mixage / Voix off</title>
-  <meta name="description" content="Benoît Pouzol — ingénieur du son, mixeur et formateur. Mixage documentaire, voix off, production rock & metal." />
+  <title>Benoît Pouzol — Ingénieur du son live / studio / voix off</title>
+  <meta name="description" content="Benoît Pouzol — ingénieur du son live, mixeur FOH, producteur studio, formateur audio. Live, studio, voix off, podcast et mixage documentaire. Basé près d’Avignon." />
 
   <style>
     :root{
-      --bg:#f5f6f8;
+      --bg:#f4f2ee;
       --text:#111;
       --muted:#555;
-      --card:#ffffff;
-      --line:#ddd;
-      --accent:#111;
+      --card:#fffdf8;
+      --line:#d8d2c8;
       --shadow:0 12px 30px rgba(0,0,0,.08);
     }
-
     *{box-sizing:border-box}
-
     body{
       margin:0;
       font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      background:linear-gradient(180deg,#ffffff 0%,#f3f4f6 100%);
+      background:
+        radial-gradient(900px 520px at 15% 8%, rgba(0,0,0,.05), transparent 55%),
+        linear-gradient(180deg,#faf8f3 0%,var(--bg) 100%);
       color:var(--text);
       line-height:1.6;
     }
-
-    .wrap{
-      max-width:1000px;
-      margin:60px auto;
-      padding:0 20px;
-    }
-
+    .wrap{max-width:1000px;margin:60px auto;padding:0 20px}
     .hero{
       display:grid;
       grid-template-columns:220px 1fr;
@@ -44,7 +37,6 @@
       border:1px solid var(--line);
       box-shadow:var(--shadow);
     }
-
     .photo{
       width:200px;
       height:200px;
@@ -52,66 +44,26 @@
       border-radius:50%;
       border:3px solid #111;
     }
-
-    h1{
-      margin:0;
-      font-size:42px;
-    }
-
-    .sub{
-      margin-top:8px;
-      color:var(--muted);
-    }
-
-    .tagline{
-      margin-top:18px;
-      font-size:18px;
-    }
-
-    .tags{
-      margin-top:20px;
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-    }
-
-    .tag{
-      padding:8px 12px;
-      border:1px solid #111;
-      font-size:14px;
-    }
-
+    h1{margin:0;font-size:42px}
+    .sub{margin-top:8px;color:var(--muted)}
+    .tagline{margin-top:18px;font-size:18px}
+    .tags{margin-top:20px;display:flex;gap:10px;flex-wrap:wrap}
+    .tag{padding:8px 12px;border:1px solid #111;font-size:14px}
     .grid{
       margin-top:30px;
       display:grid;
-      grid-template-columns:repeat(3,1fr);
+      grid-template-columns:repeat(2,1fr);
       gap:16px;
     }
-
-    .card{
+    .card,.section{
       padding:20px;
       background:var(--card);
       border:1px solid var(--line);
       box-shadow:var(--shadow);
     }
-
-    .card h2{
-      margin:0 0 10px;
-      font-size:18px;
-    }
-
-    .card p{
-      margin:0;
-      color:var(--muted);
-    }
-
-    .section{
-      margin-top:30px;
-      padding:20px;
-      background:var(--card);
-      border:1px solid var(--line);
-    }
-
+    .card h2,.section h2{margin:0 0 10px;font-size:18px}
+    .card p,.section p{margin:0;color:var(--muted)}
+    .section{margin-top:30px}
     .btn{
       display:inline-block;
       margin-top:15px;
@@ -119,8 +71,8 @@
       border:1px solid #111;
       text-decoration:none;
       color:#111;
+      background:transparent;
     }
-
     footer{
       margin-top:40px;
       padding-top:20px;
@@ -130,13 +82,12 @@
       justify-content:space-between;
       flex-wrap:wrap;
     }
-
     @media(max-width:700px){
       .hero{grid-template-columns:1fr;text-align:center}
       .photo{margin:auto}
       .grid{grid-template-columns:1fr}
+      h1{font-size:34px}
     }
-
   </style>
 </head>
 
@@ -148,18 +99,19 @@
 
       <div>
         <h1>Benoît Pouzol</h1>
-        <div class="sub">Ingénieur du son • Mixeur • Formateur — Avignon</div>
+        <div class="sub">Ingénieur du son live • FOH • Studio • Post-production — Avignon</div>
 
         <div class="tagline">
-          Mixage documentaire, voix off et production musicale.  
-          Une approche directe, technique et orientée résultat.
+          Ingénieur du son entre scène, studio et image.  
+          Live, production musicale, voix off, podcast et mixage documentaire.
         </div>
 
         <div class="tags">
+          <div class="tag">Live / FOH</div>
+          <div class="tag">Régie son</div>
+          <div class="tag">Production studio</div>
+          <div class="tag">Voix off / Podcast</div>
           <div class="tag">Mixage documentaire</div>
-          <div class="tag">Voix off / Voice over</div>
-          <div class="tag">Post-production</div>
-          <div class="tag">Rock / Metal</div>
         </div>
 
         <a class="btn" href="mailto:pouzolbenoit@gmail.com">Contact</a>
@@ -168,45 +120,45 @@
 
     <div class="grid">
       <div class="card">
-        <h2>Mix à l’image</h2>
-        <p>Mixage documentaire, voix, ambiances et musique. Travail précis et livrables propres pour diffusion.</p>
+        <h2>Live / FOH</h2>
+        <p>Mixage façade, régie son, préparation technique et exploitation live. Expérience scène, tournée et systèmes de diffusion.</p>
       </div>
 
       <div class="card">
-        <h2>Voix off</h2>
-        <p>Enregistrement et traitement de voix : intelligibilité, présence et cohérence sonore.</p>
+        <h2>Studio / production</h2>
+        <p>Enregistrement, production et mixage musical, avec une forte expérience rock, metal et musiques amplifiées.</p>
       </div>
 
       <div class="card">
-        <h2>Production musicale</h2>
-        <p>Mixage et production rock & metal au Studio La Chèvre. Son puissant, organique et maîtrisé.</p>
+        <h2>Voix off / Podcast</h2>
+        <p>Enregistrement, édition et traitement de voix : intelligibilité, présence, stabilité et livraison rapide.</p>
+      </div>
+
+      <div class="card">
+        <h2>Mixage documentaire</h2>
+        <p>Mix à l’image : dialogues, ambiances, musique, nettoyage audio et livrables propres pour diffusion.</p>
       </div>
     </div>
 
     <div class="section">
       <h2>À propos</h2>
       <p>
-        Ingénieur du son basé près d’Avignon, je travaille entre studio, live et post-production.
-        Mon parcours inclut aussi bien le mixage documentaire et la voix off que la production musicale
-        dans les esthétiques rock et metal.
+        Basé près d’Avignon, je travaille depuis plusieurs années entre le live, le studio et la post-production.
+        Mon parcours croise la régie son, le mixage façade, la production musicale, la voix off et le mixage documentaire.
       </p>
     </div>
 
     <div class="section">
-      <h2>Studio La Chèvre</h2>
+      <h2>Formation</h2>
       <p>
-        Les projets musicaux sont développés sous l’identité Studio La Chèvre,
-        dédiée aux productions rock, metal et hardcore.
+        J’interviens également comme formateur audio : live, studio, routing, consoles numériques,
+        workflow DAW, mixage et méthodes de travail professionnelles.
       </p>
-
-      <a class="btn" href="https://zoolasse.github.io/studio-la-chevre/" target="_blank">
-        Voir Studio La Chèvre
-      </a>
     </div>
 
     <footer>
       <div>© <span id="y"></span> Benoît Pouzol</div>
-      <div>France</div>
+      <div>Avignon — France</div>
     </footer>
 
   </div>
