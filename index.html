@@ -4,114 +4,139 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <title>Benoît Pouzol — Ingénieur du son / Mixage documentaire / Voix off</title>
-  <meta name="description" content="Benoît Pouzol — ingénieur du son, mixeur et formateur. Mixage documentaire, voix off / voice over, post-production audio et formation. Basé près d’Avignon." />
+  <title>Benoît Pouzol — Ingénieur du son / Mixage / Voix off</title>
+  <meta name="description" content="Benoît Pouzol — ingénieur du son, mixeur et formateur. Mixage documentaire, voix off, production rock & metal." />
 
   <style>
     :root{
-      --bg:#0b0d10;
-      --text:#eef1f6;
-      --muted:#a8b0bf;
-      --line:rgba(255,255,255,.12);
-      --soft:rgba(255,255,255,.04);
-      --accent:#8bd3ff;
-      --shadow:0 16px 40px rgba(0,0,0,.45);
+      --bg:#f5f6f8;
+      --text:#111;
+      --muted:#555;
+      --card:#ffffff;
+      --line:#ddd;
+      --accent:#111;
+      --shadow:0 12px 30px rgba(0,0,0,.08);
     }
+
     *{box-sizing:border-box}
+
     body{
       margin:0;
       font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:linear-gradient(180deg,#ffffff 0%,#f3f4f6 100%);
       color:var(--text);
-      background:
-        radial-gradient(900px 520px at 15% 10%, rgba(139,211,255,.12), transparent 55%),
-        radial-gradient(700px 420px at 85% 5%, rgba(255,255,255,.06), transparent 60%),
-        linear-gradient(180deg,#07080a 0%,var(--bg) 60%,#07080a 100%);
       line-height:1.6;
     }
-    a{color:inherit;text-decoration:none}
-    .wrap{max-width:1020px;margin:0 auto;padding:42px 18px 60px}
+
+    .wrap{
+      max-width:1000px;
+      margin:60px auto;
+      padding:0 20px;
+    }
+
     .hero{
       display:grid;
-      grid-template-columns:240px 1fr;
-      gap:28px;
+      grid-template-columns:220px 1fr;
+      gap:30px;
       align-items:center;
-      padding:22px;
+      padding:30px;
+      background:var(--card);
       border:1px solid var(--line);
-      border-radius:22px;
-      background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));
       box-shadow:var(--shadow);
     }
+
     .photo{
-      width:220px;
-      height:220px;
+      width:200px;
+      height:200px;
       object-fit:cover;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.18);
-      box-shadow:0 0 0 8px rgba(0,0,0,.25);
-      background:#111;
+      border-radius:50%;
+      border:3px solid #111;
     }
-    h1{margin:0;font-size:42px;line-height:1.05}
-    .sub{margin-top:10px;color:var(--muted);font-size:17px}
-    .tagline{margin-top:18px;font-size:18px;max-width:720px}
-    .tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
-    .tag{
-      padding:8px 11px;
-      border:1px solid var(--line);
-      border-radius:999px;
+
+    h1{
+      margin:0;
+      font-size:42px;
+    }
+
+    .sub{
+      margin-top:8px;
       color:var(--muted);
-      background:rgba(255,255,255,.03);
-      font-size:14px;
     }
-    .grid{
+
+    .tagline{
       margin-top:18px;
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:14px;
+      font-size:18px;
     }
-    .card{
-      padding:18px;
-      border:1px solid var(--line);
-      border-radius:18px;
-      background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.015));
-      box-shadow:0 10px 26px rgba(0,0,0,.25);
-    }
-    h2{font-size:18px;margin:0 0 10px}
-    .card p{margin:0;color:var(--muted)}
-    .section{
-      margin-top:18px;
-      padding:18px;
-      border:1px solid var(--line);
-      border-radius:18px;
-      background:rgba(255,255,255,.025);
-    }
-    .section p{color:var(--muted);margin:0}
-    .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
-    .btn{
-      display:inline-block;
-      padding:10px 14px;
-      border:1px solid var(--line);
-      border-radius:12px;
-      background:rgba(255,255,255,.04);
-    }
-    .btn:hover{background:rgba(255,255,255,.07)}
-    footer{
-      margin-top:24px;
-      padding-top:18px;
-      border-top:1px solid var(--line);
-      color:var(--muted);
-      font-size:13px;
+
+    .tags{
+      margin-top:20px;
       display:flex;
-      justify-content:space-between;
-      gap:14px;
+      gap:10px;
       flex-wrap:wrap;
     }
-    @media(max-width:760px){
-      .hero{grid-template-columns:1fr;text-align:center}
-      .photo{margin:0 auto}
-      h1{font-size:34px}
-      .grid{grid-template-columns:1fr}
-      .tags,.btns{justify-content:center}
+
+    .tag{
+      padding:8px 12px;
+      border:1px solid #111;
+      font-size:14px;
     }
+
+    .grid{
+      margin-top:30px;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+
+    .card{
+      padding:20px;
+      background:var(--card);
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+    }
+
+    .card h2{
+      margin:0 0 10px;
+      font-size:18px;
+    }
+
+    .card p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    .section{
+      margin-top:30px;
+      padding:20px;
+      background:var(--card);
+      border:1px solid var(--line);
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:15px;
+      padding:10px 14px;
+      border:1px solid #111;
+      text-decoration:none;
+      color:#111;
+    }
+
+    footer{
+      margin-top:40px;
+      padding-top:20px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+
+    @media(max-width:700px){
+      .hero{grid-template-columns:1fr;text-align:center}
+      .photo{margin:auto}
+      .grid{grid-template-columns:1fr}
+    }
+
   </style>
 </head>
 
@@ -119,70 +144,69 @@
   <div class="wrap">
 
     <div class="hero">
-      <img class="photo" src="photo.jpg" alt="Benoît Pouzol">
+      <img class="photo" src="zool.jpg" alt="Benoît Pouzol">
 
       <div>
         <h1>Benoît Pouzol</h1>
-        <div class="sub">Ingénieur du son • Mixeur • Formateur audio — près d’Avignon</div>
+        <div class="sub">Ingénieur du son • Mixeur • Formateur — Avignon</div>
 
         <div class="tagline">
-          Mixage documentaire, voix off / voice over, post-production audio et accompagnement technique.
-          Une approche directe, fiable, orientée résultat.
+          Mixage documentaire, voix off et production musicale.  
+          Une approche directe, technique et orientée résultat.
         </div>
 
         <div class="tags">
-          <span class="tag">Mixage documentaire</span>
-          <span class="tag">Voix off / VO</span>
-          <span class="tag">Post-production audio</span>
-          <span class="tag">Formation</span>
+          <div class="tag">Mixage documentaire</div>
+          <div class="tag">Voix off / Voice over</div>
+          <div class="tag">Post-production</div>
+          <div class="tag">Rock / Metal</div>
         </div>
 
-        <div class="btns">
-          <a class="btn" href="mailto:pouzolbenoit@gmail.com">Me contacter</a>
-          <a class="btn" href="https://www.linkedin.com/in/benoit-pouzol-17554a24a/" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
+        <a class="btn" href="mailto:pouzolbenoit@gmail.com">Contact</a>
       </div>
     </div>
 
     <div class="grid">
       <div class="card">
-        <h2>Documentaire</h2>
-        <p>Mixage voix, ambiances, musique, nettoyage et préparation de livrables propres pour diffusion.</p>
+        <h2>Mix à l’image</h2>
+        <p>Mixage documentaire, voix, ambiances et musique. Travail précis et livrables propres pour diffusion.</p>
       </div>
 
       <div class="card">
-        <h2>Voix off / Voice over</h2>
-        <p>Enregistrement, édition et traitement de voix : intelligibilité, présence, stabilité, livraison rapide.</p>
+        <h2>Voix off</h2>
+        <p>Enregistrement et traitement de voix : intelligibilité, présence et cohérence sonore.</p>
       </div>
 
       <div class="card">
-        <h2>Formation audio</h2>
-        <p>Formation pratique autour du studio, du live, du routing, du mixage et des workflows professionnels.</p>
+        <h2>Production musicale</h2>
+        <p>Mixage et production rock & metal au Studio La Chèvre. Son puissant, organique et maîtrisé.</p>
       </div>
     </div>
 
     <div class="section">
       <h2>À propos</h2>
       <p>
-        Ingénieur du son basé près d’Avignon, je travaille entre studio, live, post-production et pédagogie.
-        Mon objectif : fournir un son clair, solide et exploitable, avec une méthode simple et efficace.
+        Ingénieur du son basé près d’Avignon, je travaille entre studio, live et post-production.
+        Mon parcours inclut aussi bien le mixage documentaire et la voix off que la production musicale
+        dans les esthétiques rock et metal.
       </p>
     </div>
 
     <div class="section">
       <h2>Studio La Chèvre</h2>
       <p>
-        Les projets rock, metal et hardcore sont regroupés sous l’identité Studio La Chèvre,
-        studio de mixage et production dédié aux musiques fortes.
+        Les projets musicaux sont développés sous l’identité Studio La Chèvre,
+        dédiée aux productions rock, metal et hardcore.
       </p>
-      <div class="btns">
-        <a class="btn" href="https://zoolasse.github.io/studio-la-chevre/" target="_blank" rel="noopener">Voir Studio La Chèvre</a>
-      </div>
+
+      <a class="btn" href="https://zoolasse.github.io/studio-la-chevre/" target="_blank">
+        Voir Studio La Chèvre
+      </a>
     </div>
 
     <footer>
       <div>© <span id="y"></span> Benoît Pouzol</div>
-      <div>Avignon — France</div>
+      <div>France</div>
     </footer>
 
   </div>
