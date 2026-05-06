@@ -5,204 +5,425 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
   <title>Benoît Pouzol — Ingénieur du son live / studio / voix off</title>
-  <meta name="description" content="Benoît Pouzol — ingénieur du son live, mixeur FOH, producteur studio, formateur audio. Live, studio, voix off, podcast et mixage documentaire. Basé près d’Avignon." />
+
+  <meta name="description" content="Benoît Pouzol — ingénieur du son live, studio, mixeur FOH, producteur musical, voix off, podcast et mixage documentaire. Basé près d’Avignon." />
 
   <style>
+
     :root{
-      --bg:#f4f2ee;
-      --text:#111;
-      --muted:#555;
-      --card:#fffdf8;
-      --line:#d8d2c8;
+      --bg:#f3f1ec;
+      --card:#fcfbf8;
+      --text:#121212;
+      --muted:#5b5b5b;
+      --line:#d8d1c7;
       --shadow:0 12px 30px rgba(0,0,0,.08);
     }
-    *{box-sizing:border-box}
+
+    *{
+      box-sizing:border-box;
+    }
+
     body{
       margin:0;
       font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      background:
-        radial-gradient(900px 520px at 15% 8%, rgba(0,0,0,.05), transparent 55%),
-        linear-gradient(180deg,#faf8f3 0%,var(--bg) 100%);
       color:var(--text);
-      line-height:1.6;
+
+      background:
+        radial-gradient(1200px 600px at 10% 0%, rgba(0,0,0,.05), transparent 60%),
+        linear-gradient(180deg,#faf8f4 0%, var(--bg) 100%);
+
+      line-height:1.65;
     }
-    .wrap{max-width:1000px;margin:60px auto;padding:0 20px}
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .wrap{
+      max-width:1100px;
+      margin:60px auto;
+      padding:0 22px;
+    }
+
+    /* HERO */
+
     .hero{
       display:grid;
-      grid-template-columns:220px 1fr;
-      gap:30px;
+      grid-template-columns:240px 1fr;
+      gap:34px;
+
       align-items:center;
-      padding:30px;
+
+      padding:34px;
+
       background:var(--card);
+
       border:1px solid var(--line);
+
       box-shadow:var(--shadow);
     }
+
     .photo{
-      width:200px;
-      height:200px;
+      width:220px;
+      height:220px;
+
       object-fit:cover;
+
       border-radius:50%;
-      border:3px solid #111;
+
+      border:4px solid #111;
+
+      box-shadow:0 0 0 8px rgba(0,0,0,.06);
     }
-    h1{margin:0;font-size:42px}
-    .sub{margin-top:8px;color:var(--muted)}
-    .tagline{margin-top:18px;font-size:18px}
-    .tags{margin-top:20px;display:flex;gap:10px;flex-wrap:wrap}
-    .tag{padding:8px 12px;border:1px solid #111;font-size:14px}
-    .grid{
-      margin-top:30px;
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:16px;
+
+    h1{
+      margin:0;
+      font-size:46px;
+      line-height:1.05;
+      letter-spacing:-1px;
     }
-    .card,.section{
-      padding:20px;
-      background:var(--card);
-      border:1px solid var(--line);
-      box-shadow:var(--shadow);
+
+    .sub{
+      margin-top:10px;
+      color:var(--muted);
+      font-size:17px;
     }
-    .card h2,.section h2{margin:0 0 10px;font-size:18px}
-    .card p,.section p{margin:0;color:var(--muted)}
-    .section{margin-top:30px}
-    .btn{
-      display:inline-block;
-      margin-top:15px;
-      padding:10px 14px;
+
+    .tagline{
+      margin-top:20px;
+      font-size:20px;
+      max-width:720px;
+    }
+
+    .tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:22px;
+    }
+
+    .tag{
       border:1px solid #111;
-      text-decoration:none;
-      color:#111;
-      background:transparent;
+      padding:8px 12px;
+      font-size:14px;
+      background:white;
     }
+
+    .contact-btn{
+      display:inline-block;
+
+      margin-top:24px;
+
+      border:1px solid #111;
+
+      padding:11px 15px;
+
+      font-size:14px;
+
+      transition:.15s ease;
+    }
+
+    .contact-btn:hover{
+      background:#111;
+      color:white;
+    }
+
+    /* GRID */
+
+    .grid{
+      margin-top:28px;
+
+      display:grid;
+
+      grid-template-columns:repeat(2,1fr);
+
+      gap:18px;
+    }
+
+    .card{
+      background:var(--card);
+
+      border:1px solid var(--line);
+
+      box-shadow:var(--shadow);
+
+      padding:22px;
+    }
+
+    .card h2{
+      margin:0 0 10px;
+      font-size:20px;
+    }
+
+    .card p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    /* ALBUMS */
+
+    .albums{
+      margin-top:18px;
+
+      display:grid;
+
+      grid-template-columns:repeat(5,1fr);
+
+      gap:8px;
+    }
+
+    .albums img{
+      width:100%;
+      aspect-ratio:1;
+
+      object-fit:cover;
+
+      display:block;
+
+      border:1px solid #111;
+
+      filter:grayscale(100%);
+
+      transition:.18s ease;
+    }
+
+    .albums img:hover{
+      transform:scale(1.03);
+      filter:none;
+    }
+
+    /* SECTIONS */
+
+    .section{
+      margin-top:28px;
+
+      background:var(--card);
+
+      border:1px solid var(--line);
+
+      box-shadow:var(--shadow);
+
+      padding:24px;
+    }
+
+    .section h2{
+      margin:0 0 12px;
+      font-size:20px;
+    }
+
+    .section p{
+      margin:0;
+      color:var(--muted);
+    }
+
     footer{
       margin-top:40px;
+
       padding-top:20px;
+
       border-top:1px solid var(--line);
+
       color:var(--muted);
+
       display:flex;
+
       justify-content:space-between;
+
+      gap:20px;
+
       flex-wrap:wrap;
+
+      font-size:14px;
     }
-    @media(max-width:700px){
-      .hero{grid-template-columns:1fr;text-align:center}
-      .photo{margin:auto}
-      .grid{grid-template-columns:1fr}
-      h1{font-size:34px}
+
+    @media(max-width:900px){
+
+      .albums{
+        grid-template-columns:repeat(4,1fr);
+      }
+
     }
+
+    @media(max-width:760px){
+
+      .hero{
+        grid-template-columns:1fr;
+        text-align:center;
+      }
+
+      .photo{
+        margin:auto;
+      }
+
+      .grid{
+        grid-template-columns:1fr;
+      }
+
+      .albums{
+        grid-template-columns:repeat(3,1fr);
+      }
+
+      h1{
+        font-size:36px;
+      }
+
+      .tags{
+        justify-content:center;
+      }
+
+    }
+
   </style>
 </head>
 
 <body>
-  <div class="wrap">
 
-    <div class="hero">
-      <img class="photo" src="zool.jpg" alt="Benoît Pouzol">
+<div class="wrap">
 
-      <div>
-        <h1>Benoît Pouzol</h1>
-        <div class="sub">Ingénieur du son live • FOH • Studio • Post-production — Avignon</div>
+  <!-- HERO -->
 
-        <div class="tagline">
-          Ingénieur du son entre scène, studio et image.  
-          Live, production musicale, voix off, podcast et mixage documentaire.
-        </div>
+  <div class="hero">
 
-        <div class="tags">
-          <div class="tag">Live / FOH</div>
-          <div class="tag">Régie son</div>
-          <div class="tag">Production studio</div>
-          <div class="tag">Voix off / Podcast</div>
-          <div class="tag">Mixage documentaire</div>
-        </div>
+    <img class="photo" src="zool.jpg" alt="Benoît Pouzol">
 
-        <a class="btn" href="mailto:pouzolbenoit@gmail.com">Contact</a>
+    <div>
+
+      <h1>Benoît Pouzol</h1>
+
+      <div class="sub">
+        Ingénieur du son live • FOH • Studio • Post-production — Avignon
       </div>
+
+      <div class="tagline">
+        Ingénieur du son entre scène, studio et image.  
+        Live, production musicale, voix off, podcast et mixage documentaire.
+      </div>
+
+      <div class="tags">
+        <div class="tag">Live / FOH</div>
+        <div class="tag">Production studio</div>
+        <div class="tag">Voix off / Podcast</div>
+        <div class="tag">Mixage documentaire</div>
+        <div class="tag">Rock / Metal</div>
+      </div>
+
+      <a class="contact-btn" href="mailto:pouzolbenoit@gmail.com">
+        Contact
+      </a>
+
     </div>
 
-    <div class="grid">
-      <div class="card">
-        <h2>Live / FOH</h2>
-        <p>Mixage façade, régie son, préparation technique et exploitation live. Expérience scène, tournée et systèmes de diffusion.</p>
-      </div>
-
-      <div class="card">
-        <h2>Studio / production</h2>
-        <p>Enregistrement, production et mixage musical, avec une forte expérience rock, metal et musiques amplifiées.</p>
-        <div class="card">
-  <h2>Studio / production</h2>
-  <p>
-    Enregistrement, production et mixage musical, avec une forte expérience rock, metal et musiques amplifiées.
-  </p>
-.albums{
-  margin-top:15px;
-  display:grid;
-  grid-template-columns:repeat(auto-fill, minmax(60px, 1fr));
-  gap:6px;
-}
-
-.albums img{
-  width:100%;
-  aspect-ratio:1;
-  object-fit:cover;
-  filter:grayscale(100%);
-  transition:all .2s ease;
-  border:1px solid #111;
-}
-
-.albums img:hover{
-  filter:none;
-  transform:scale(1.05);
-}
-  <div class="albums">
-    <img src="acidmist.jpg">
-    <img src="dust.jpg">
-    <img src="dust2.jpg">
-    <img src="emetik.jpg">
-    <img src="headslice.jpg">
-    <img src="metaine.jpg">
-    <img src="offshore.jpg">
-    <img src="triggoffsilence.jpg">
-    <img src="wearecursed1.jpg">
-    <img src="wearecursed2.jpg">
   </div>
+
+  <!-- SERVICES -->
+
+  <div class="grid">
+
+    <div class="card">
+      <h2>Live / FOH</h2>
+
+      <p>
+        Mixage façade, régie son, préparation technique et exploitation live.
+        Expérience scène, tournée et systèmes de diffusion.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Voix off / Podcast</h2>
+
+      <p>
+        Enregistrement, édition et traitement de voix :
+        intelligibilité, présence et stabilité sonore.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Mixage documentaire</h2>
+
+      <p>
+        Mix à l’image : dialogues, ambiances, musique,
+        nettoyage audio et livrables diffusion.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Formation audio</h2>
+
+      <p>
+        Formation live, studio, routing, consoles numériques,
+        workflow DAW et méthodes professionnelles.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- STUDIO / PROD -->
+
+  <div class="section">
+
+    <h2>Production / Studio</h2>
+
+    <p>
+      Production, enregistrement et mixage musical avec une forte expérience
+      dans les musiques rock, metal et hardcore.
+      Compositeur et producteur du projet GoulouD.
+    </p>
+
+    <div class="albums">
+
+      <img src="acidmist.jpg" alt="">
+      <img src="cursed1.jpg" alt="">
+      <img src="cursed2.jpg" alt="">
+      <img src="deepthroattracheotomy.jpg" alt="">
+      <img src="dust.jpg" alt="">
+      <img src="dust2.jpg" alt="">
+      <img src="emetik.jpg" alt="">
+      <img src="headslice.jpg" alt="">
+      <img src="metaine.jpg" alt="">
+      <img src="offshore.jpg" alt="">
+      <img src="synopsys1.jpg" alt="">
+      <img src="synopsys2.jpg" alt="">
+      <img src="triggoffsilence.jpg" alt="">
+
+    </div>
+
+  </div>
+
+  <!-- ABOUT -->
+
+  <div class="section">
+
+    <h2>À propos</h2>
+
+    <p>
+      Basé près d’Avignon, je travaille depuis plusieurs années entre le live,
+      le studio et la post-production.
+      Mon parcours croise la régie son, le mixage façade,
+      la production musicale, la voix off et le mixage documentaire.
+    </p>
+
+  </div>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div>
+      © <span id="y"></span> Benoît Pouzol
+    </div>
+
+    <div>
+      Avignon — France
+    </div>
+
+  </footer>
+
 </div>
-      </div>
 
-      <div class="card">
-        <h2>Voix off / Podcast</h2>
-        <p>Enregistrement, édition et traitement de voix : intelligibilité, présence, stabilité et livraison rapide.</p>
-      </div>
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
 
-      <div class="card">
-        <h2>Mixage documentaire</h2>
-        <p>Mix à l’image : dialogues, ambiances, musique, nettoyage audio et livrables propres pour diffusion.</p>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>À propos</h2>
-      <p>
-        Basé près d’Avignon, je travaille depuis plusieurs années entre le live, le studio et la post-production.
-        Mon parcours croise la régie son, le mixage façade, la production musicale, la voix off et le mixage documentaire.
-      </p>
-    </div>
-
-    <div class="section">
-      <h2>Formation</h2>
-      <p>
-        J’interviens également comme formateur audio : live, studio, routing, consoles numériques,
-        workflow DAW, mixage et méthodes de travail professionnelles.
-      </p>
-    </div>
-
-    <footer>
-      <div>© <span id="y"></span> Benoît Pouzol</div>
-      <div>Avignon — France</div>
-    </footer>
-
-  </div>
-
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
