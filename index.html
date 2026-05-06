@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
   <title>Benoît Pouzol — Ingénieur du son live / studio / voix off</title>
-  <meta name="description" content="Benoît Pouzol — ingénieur du son live, studio, mixeur FOH, producteur musical, voix off, podcast et mixage documentaire. Basé près d’Avignon." />
+  <meta name="description" content="Benoît Pouzol — ingénieur du son live, mixeur FOH, producteur studio, voix off, podcast, mixage documentaire et formation audio. Basé près d’Avignon." />
 
   <style>
     :root{
@@ -17,7 +17,7 @@
       --shadow:0 12px 30px rgba(0,0,0,.08);
     }
 
-    *{ box-sizing:border-box; }
+    *{box-sizing:border-box}
 
     body{
       margin:0;
@@ -29,10 +29,7 @@
       line-height:1.65;
     }
 
-    a{
-      color:inherit;
-      text-decoration:none;
-    }
+    a{color:inherit;text-decoration:none}
 
     .wrap{
       max-width:1100px;
@@ -42,7 +39,7 @@
 
     .hero{
       display:grid;
-      grid-template-columns:240px 1fr;
+      grid-template-columns:220px 1fr 220px;
       gap:34px;
       align-items:center;
       padding:34px;
@@ -58,6 +55,14 @@
       border-radius:50%;
       border:4px solid #111;
       box-shadow:0 0 0 8px rgba(0,0,0,.06);
+    }
+
+    .hero-logo{
+      width:220px;
+      height:220px;
+      object-fit:cover;
+      border:1px solid #111;
+      box-shadow:var(--shadow);
     }
 
     h1{
@@ -131,35 +136,14 @@
       color:var(--muted);
     }
 
-    .live-image{
+    .section-image{
       width:100%;
-      height:180px;
+      height:160px;
       object-fit:cover;
       display:block;
-      margin-bottom:16px;
+      margin:0 0 16px;
       border:1px solid #111;
       filter:grayscale(100%);
-    }
-
-    .albums{
-      margin-top:18px;
-      display:grid;
-      grid-template-columns:repeat(5,1fr);
-      gap:8px;
-    }
-
-    .albums img{
-      width:100%;
-      aspect-ratio:1;
-      object-fit:cover;
-      display:block;
-      border:1px solid #111;
-      transition:.18s ease;
-    }
-
-    .albums img:hover{
-      transform:scale(1.03);
-      filter:none;
     }
 
     .section{
@@ -180,6 +164,29 @@
       color:var(--muted);
     }
 
+    .albums{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns:repeat(6,1fr);
+      gap:8px;
+    }
+
+    .albums img{
+      width:100%;
+      aspect-ratio:1;
+      object-fit:cover;
+      display:block;
+      border:1px solid #111;
+      filter:grayscale(100%);
+      transition:.18s ease;
+      background:#ddd;
+    }
+
+    .albums img:hover{
+      transform:scale(1.03);
+      filter:none;
+    }
+
     footer{
       margin-top:40px;
       padding-top:20px;
@@ -192,25 +199,49 @@
       font-size:14px;
     }
 
-    @media(max-width:900px){
-      .albums{ grid-template-columns:repeat(4,1fr); }
+    @media(max-width:950px){
+      .hero{
+        grid-template-columns:200px 1fr;
+      }
+
+      .hero-logo{
+        display:none;
+      }
+
+      .albums{
+        grid-template-columns:repeat(4,1fr);
+      }
     }
 
     @media(max-width:760px){
+      .wrap{
+        margin:28px auto;
+      }
+
       .hero{
         grid-template-columns:1fr;
         text-align:center;
       }
 
-      .photo{ margin:auto; }
+      .photo{
+        margin:auto;
+      }
 
-      .grid{ grid-template-columns:1fr; }
+      .grid{
+        grid-template-columns:1fr;
+      }
 
-      .albums{ grid-template-columns:repeat(3,1fr); }
+      .albums{
+        grid-template-columns:repeat(3,1fr);
+      }
 
-      h1{ font-size:36px; }
+      h1{
+        font-size:36px;
+      }
 
-      .tags{ justify-content:center; }
+      .tags{
+        justify-content:center;
+      }
     }
   </style>
 </head>
@@ -239,17 +270,19 @@
         <div class="tag">Production studio</div>
         <div class="tag">Voix off / Podcast</div>
         <div class="tag">Mixage documentaire</div>
-        <div class="tag">Rock / Metal</div>
+        <div class="tag">Formation audio</div>
       </div>
 
       <a class="contact-btn" href="mailto:pouzolbenoit@gmail.com">Contact</a>
     </div>
+
+    <img class="hero-logo" src="lampe.jpg" alt="Studio / ambiance">
   </div>
 
   <div class="grid">
 
     <div class="card">
-      <img class="live-image" src="hellfest.jpg" alt="Live FOH">
+      <img class="section-image" src="hellfest.jpg" alt="Live FOH">
       <h2>Live / FOH</h2>
       <p>
         Mixage façade, régie son, préparation technique et exploitation live.
@@ -258,6 +291,7 @@
     </div>
 
     <div class="card">
+      <img class="section-image" src="millenia.jpg" alt="Voix off">
       <h2>Voix off / Podcast</h2>
       <p>
         Enregistrement, édition et traitement de voix :
@@ -266,6 +300,7 @@
     </div>
 
     <div class="card">
+      <img class="section-image" src="zul.jpg" alt="Mixage documentaire">
       <h2>Mixage documentaire</h2>
       <p>
         Mix à l’image : dialogues, ambiances, musique,
@@ -274,6 +309,7 @@
     </div>
 
     <div class="card">
+      <img class="section-image" src="ampli.jpg" alt="Formation audio">
       <h2>Formation audio</h2>
       <p>
         Formation live, studio, routing, consoles numériques,
@@ -291,35 +327,22 @@
       dans les musiques rock, metal et hardcore.
       Compositeur et producteur du projet GoulouD.
     </p>
-.albums img{
-  width:100%;
-  aspect-ratio:1;
 
-  object-fit:cover;
-
-  display:block;
-
-  border:1px solid #111;
-
-  transition:.18s ease;
-}
     <div class="albums">
-
-  <img src="assets/albums/acidmist.jpg" alt="">
-  <img src="assets/albums/cursed1.jpg" alt="">
-  <img src="assets/albums/cursed2.jpg" alt="">
-  <img src="assets/albums/deepthroattracheotomy.jpg" alt="">
-  <img src="assets/albums/dust.jpg" alt="">
-  <img src="assets/albums/dust2.jpg" alt="">
-  <img src="assets/albums/emetik.jpg" alt="">
-  <img src="assets/albums/headslice.jpg" alt="">
-  <img src="assets/albums/metaine.jpg" alt="">
-  <img src="assets/albums/offshore.jpg" alt="">
-  <img src="assets/albums/synopsys1.jpg" alt="">
-  <img src="assets/albums/synopsys2.jpg" alt="">
-  <img src="assets/albums/triggoffsilence.jpg" alt="">
-
-</div>
+      <img src="assets/albums/acidmist.jpg" alt="">
+      <img src="assets/albums/cursed1.jpg" alt="">
+      <img src="assets/albums/cursed2.jpg" alt="">
+      <img src="assets/albums/deepthroattracheotomy.jpg" alt="">
+      <img src="assets/albums/dust.jpg" alt="">
+      <img src="assets/albums/dust2.jpg" alt="">
+      <img src="assets/albums/emetik.jpg" alt="">
+      <img src="assets/albums/headslice.jpg" alt="">
+      <img src="assets/albums/metaine.jpg" alt="">
+      <img src="assets/albums/offshore.jpg" alt="">
+      <img src="assets/albums/synopsys1.jpg" alt="">
+      <img src="assets/albums/synopsys2.jpg" alt="">
+      <img src="assets/albums/triggoffsilence.jpg" alt="">
+    </div>
   </div>
 
   <div class="section">
@@ -327,8 +350,8 @@
     <p>
       Basé près d’Avignon, je travaille depuis plusieurs années entre le live,
       le studio et la post-production.
-      Mon parcours croise la régie son, le mixage façade,
-      la production musicale, la voix off et le mixage documentaire.
+      Mon parcours croise la régie son, le mixage façade, la production musicale,
+      la voix off, le podcast, la formation audio et le mixage documentaire.
     </p>
   </div>
 
