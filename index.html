@@ -98,20 +98,6 @@
       background:white;
     }
 
-    .contact-btn{
-      display:inline-block;
-      margin-top:24px;
-      border:1px solid #111;
-      padding:11px 15px;
-      font-size:14px;
-      transition:.15s ease;
-    }
-
-    .contact-btn:hover{
-      background:#111;
-      color:white;
-    }
-
     .grid{
       margin-top:28px;
       display:grid;
@@ -143,7 +129,6 @@
       display:block;
       margin:0 0 16px;
       border:1px solid #111;
-      filter:grayscale(100%);
     }
 
     .section{
@@ -177,14 +162,12 @@
       object-fit:cover;
       display:block;
       border:1px solid #111;
-      filter:grayscale(100%);
       transition:.18s ease;
       background:#ddd;
     }
 
     .albums img:hover{
       transform:scale(1.03);
-      filter:none;
     }
 
     footer{
@@ -197,6 +180,11 @@
       gap:20px;
       flex-wrap:wrap;
       font-size:14px;
+    }
+
+    .phone{
+      font-size:13px;
+      opacity:.75;
     }
 
     @media(max-width:950px){
@@ -272,11 +260,19 @@
         <div class="tag">Mixage documentaire</div>
         <div class="tag">Formation audio</div>
       </div>
-
-      <a class="contact-btn" href="mailto:pouzolbenoit@gmail.com">Contact</a>
     </div>
 
     <img class="hero-logo" src="lampe.jpg" alt="Studio / ambiance">
+  </div>
+
+  <div class="section">
+    <h2>À propos</h2>
+    <p>
+      Basé près d’Avignon, je travaille depuis plusieurs années entre le live,
+      le studio et la post-production.
+      Mon parcours croise la régie son, le mixage façade, la production musicale,
+      la voix off, le podcast, la formation audio et le mixage documentaire.
+    </p>
   </div>
 
   <div class="grid">
@@ -345,18 +341,9 @@
     </div>
   </div>
 
-  <div class="section">
-    <h2>À propos</h2>
-    <p>
-      Basé près d’Avignon, je travaille depuis plusieurs années entre le live,
-      le studio et la post-production.
-      Mon parcours croise la régie son, le mixage façade, la production musicale,
-      la voix off, le podcast, la formation audio et le mixage documentaire.
-    </p>
-  </div>
-
   <footer>
     <div>© <span id="y"></span> Benoît Pouzol</div>
+    <div class="phone">Téléphone : 06 XX XX XX XX</div>
     <div>Avignon — France</div>
   </footer>
 
